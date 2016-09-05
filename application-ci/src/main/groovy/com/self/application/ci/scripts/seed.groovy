@@ -1,7 +1,8 @@
 branch = "master"
 url = "https://github.com/vsykszz/MyProject.git"
 
-freeStyleJob('configure-hostnames-sdp') {
+def jobNmae = 'seed-job'
+job(jobNmae) {
     disabled(false)
     logRotator(numToKeep = 100)
     description 'this job is used to create agbot stack in a specific environment'
