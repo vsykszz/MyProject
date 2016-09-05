@@ -2,6 +2,7 @@ branch = "master"
 url = "https://github.com/vsykszz/MyProject.git"
 
 freeStyleJob('configure-hostnames-sdp') {
+    disabled(false)
     logRotator(numToKeep = 100)
     description 'this job is used to create agbot stack in a specific environment'
     parameters {
@@ -11,9 +12,8 @@ freeStyleJob('configure-hostnames-sdp') {
         }
     }
     scm {
-        git(url, branch)
+        git(url, branch, '')
         steps {
-            shell()
         }
     }
 }
