@@ -12,8 +12,13 @@ freeStyleJob('configure-hostnames-sdp') {
         }
     }
     scm {
-        git(url, branch, '')
-        steps {
+        git {
+            remote {
+                url('https://github.com/vsykszz/MyProject.git')
+                branch('*/master')
+            }
         }
+    }
+    steps {
     }
 }
